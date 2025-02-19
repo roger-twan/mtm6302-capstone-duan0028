@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Fan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-[url('/background.webp')] bg-cover bg-center h-screen flex flex-col items-center">
+  <h1 class="text-5xl font-bold text-white text-center pt-12 [-webkit-text-stroke:0.5px_black]">Quiz Fan</h1>
+
+  <div id="content" class="absolute top-1/2 transform -translate-y-1/2">
+    <!-- Select level -->
+    <template id="select-level-template">
+      <div class="flex flex-col items-center">
+        <div class="inline-block mx-auto px-6 py-2 bg-white rounded-2xl text-center shadow-lg text-lg">
+          <label for="level">Select Level:</label>
+          <select name="level" id="level">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <button id="start-button" class="bg-[#759A30] text-white font-bold px-20 py-2 rounded-full mt-8 cursor-pointer shadow-lg hover:shadow-md text-lg">Start</button>
+      </div>
+    </template>
+
+    <!-- questions -->
+    <template id="question-template">
+      <div class="flex flex-col items-center">
+        <div class="inline-block mx-auto px-6 py-2 bg-white rounded-2xl text-center shadow-lg text-left max-w-9/10">
+          <p>Which of the following commands will install Ansible on Ubuntu?</p>
+          <form action="" class="mt-2">
+            <input type="checkbox" name="answer" value="1"> sudo apt-get install ansible<br>
+            <input type="checkbox" name="answer" value="2"> pip install ansible<br>
+            <input type="checkbox" name="answer" value="3"> apt-get install ansible<br>
+            <input type="checkbox" name="answer" value="4"> apt install ansible
+          </form>
+        </div>
+        <button id="submit-button" class="bg-[#759A30] text-white font-bold px-20 py-2 rounded-full mt-8 cursor-pointer shadow-lg hover:shadow-md">Submit</button>
+      </div>
+    </template>
+
+    <!-- result -->
+    <template id="result-template">
+      <div class="flex flex-col items-center">
+        <div class="inline-block mx-auto px-6 py-2 bg-white rounded-2xl text-center shadow-lg">
+          <p class="text-9xl p-6">🎉</p>
+          <p class="text-[#759A30]">Correct</p>
+        </div>
+        <!-- <div class="inline-block mx-auto px-6 py-2 bg-white rounded-2xl text-center shadow-lg">
+          <p class="text-9xl p-6">💔</p>
+          <p class="text-[#FF0000]">Error</p>
+        </div> -->
+        <button id="new-quiz-button" class="bg-[#759A30] text-white font-bold px-20 py-2 rounded-full mt-8 cursor-pointer shadow-lg hover:shadow-md">Start a new quiz</button>
+  
+        <div class="absolute -bottom-40 flex mx-auto px-6 py-2 bg-white rounded-2xl text-center shadow-lg">
+          <p>Accuracy:<span class="ml-2">4/3</span></p>
+          <button class="border-1 ml-[120px] rounded-md px-2 cursor-pointer hover:bg-[#759A30] hover:text-white">X</button>
+        </div>
+      </div>
+    </template>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

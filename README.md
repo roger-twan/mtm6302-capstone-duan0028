@@ -18,11 +18,21 @@
 - Added select level template, question template, and result template.
 - Added event listener to switch between templates.
 
+## Steps Taken to Create the Application
+- Fetched data from the API.
+- Filled the question template with the fetched data.
+- Check the user's answer.
+- Display the result template.
+
 ## Resources Used
 - Google Fonts: "Irish Grover" for the main font.
 - Background Image: Free licensed image from [Vecteezy](https://www.vecteezy.com/photo/28101965-background-scene-with-many-trees-in-the-park-ai-generated)
 
-## Challenges Faced to complete the Prototype
+## Challenges Faced to Complete the Prototype
 - Implementing a responsive design for different screen sizes.
 - Seeking a familiar and free license alternative image for the background image.
 - detecting the button click event that are inserted into the DOM dynamically.
+
+## Challenges Faced to Complete the Application
+- Checking the user's answer.
+- Store and delete the user's score.

@@ -33,12 +33,8 @@
     <template id="question-template">
       <div class="flex flex-col items-center">
         <div class="inline-block mx-auto px-6 py-2 bg-white rounded-2xl text-center shadow-lg text-left max-w-9/10">
-          <p>Which of the following commands will install Ansible on Ubuntu?</p>
-          <form action="" class="mt-2">
-            <input type="checkbox" name="answer" value="1"> sudo apt-get install ansible<br>
-            <input type="checkbox" name="answer" value="2"> pip install ansible<br>
-            <input type="checkbox" name="answer" value="3"> apt-get install ansible<br>
-            <input type="checkbox" name="answer" value="4"> apt install ansible
+          <p id="question"></p>
+          <form id="answer-form" action="" class="mt-2">
           </form>
         </div>
         <button id="submit-button" class="bg-[#759A30] text-white font-bold px-20 py-2 rounded-full mt-8 cursor-pointer shadow-lg hover:shadow-md">Submit</button>
@@ -47,20 +43,16 @@
 
     <!-- result -->
     <template id="result-template">
-      <div class="flex flex-col items-center">
+      <div id="result-container" class="flex flex-col items-center">
         <div class="inline-block mx-auto px-6 py-2 bg-white rounded-2xl text-center shadow-lg">
-          <p class="text-9xl p-6">🎉</p>
-          <p class="text-[#759A30]">Correct</p>
+          <p id="result-icon" class="text-9xl p-6"></p>
+          <p id="result-text" class="text-[#759A30]"></p>
         </div>
-        <!-- <div class="inline-block mx-auto px-6 py-2 bg-white rounded-2xl text-center shadow-lg">
-          <p class="text-9xl p-6">💔</p>
-          <p class="text-[#FF0000]">Error</p>
-        </div> -->
         <button id="new-quiz-button" class="bg-[#759A30] text-white font-bold px-20 py-2 rounded-full mt-8 cursor-pointer shadow-lg hover:shadow-md">Start a new quiz</button>
   
         <div class="absolute -bottom-40 flex mx-auto px-6 py-2 bg-white rounded-2xl text-center shadow-lg">
-          <p>Accuracy:<span class="ml-2">4/3</span></p>
-          <button class="border-1 ml-[120px] rounded-md px-2 cursor-pointer hover:bg-[#759A30] hover:text-white">X</button>
+          <p>Accuracy:<span id="accuracy" class="ml-2"></span></p>
+          <button id="clear-button" class="border-1 ml-[120px] rounded-md px-2 cursor-pointer hover:bg-[#759A30] hover:text-white">X</button>
         </div>
       </div>
     </template>
